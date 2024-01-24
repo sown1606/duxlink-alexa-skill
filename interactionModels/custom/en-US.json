@@ -1,0 +1,462 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "systolic",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.72630433167.1009930112388",
+                "confirmation": "Confirm.Slot.611037829134.696550596557"
+              }
+            },
+            {
+              "name": "diastolic",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1429144015159.1203086049262",
+                "confirmation": "Confirm.Slot.611037829134.694721882518"
+              }
+            },
+            {
+              "name": "heartRate",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1250704241389.236951164616",
+                "confirmation": "Confirm.Slot.611037829134.1020104343274"
+              }
+            },
+            {
+              "name": "oxygenSaturation",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.611037829134.1574447984807",
+                "confirmation": "Confirm.Slot.611037829134.1574447984807"
+              }
+            },
+            {
+              "name": "weight",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.611037829134.1161069673329",
+                "confirmation": "Confirm.Slot.611037829134.1161069673329"
+              }
+            },
+            {
+              "name": "glucose",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.611037829134.1673529771985",
+                "confirmation": "Confirm.Slot.611037829134.1673529771985"
+              }
+            },
+            {
+              "name": "urineOutput",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.611037829134.522261055028",
+                "confirmation": "Confirm.Slot.611037829134.522261055028"
+              }
+            },
+            {
+              "name": "addVitalConfirm",
+              "elicitationRequired": false,
+              "type": "AddVitalConfirm",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "AddVitalsIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "SurveyIntent",
+          "samples": [
+            "start survey",
+            "begin survey",
+            "take survey",
+            "start my survey"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SkipQuestionSurveyIntent",
+          "samples": [
+            "skip",
+            "skip this question",
+            "next question"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "Answer",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "AnswerYesNo",
+              "type": "SurveyYesNoAnswer"
+            }
+          ],
+          "name": "AnswerIntent",
+          "samples": [
+            "{Answer}",
+            "{AnswerYesNo}",
+            "my answer is {Answer}",
+            "my answer is {AnswerYesNo}",
+            "I choose {Answer}",
+            "I choose {AnswerYesNo}",
+            "my response is {Answer}",
+            "my response is {AnswerYesNo}",
+            "I said {Answer}",
+            "I said {AnswerYesNo}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SurveyYesIntent",
+          "samples": [
+            "sure",
+            "absolutely",
+            "ok",
+            "alright",
+            "yep",
+            "yeah",
+            "correct",
+            "right",
+            "indeed",
+            "affirmative"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SurveyNoIntent",
+          "samples": [
+            "nope",
+            "negative",
+            "not",
+            "incorrect",
+            "wrong"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "systolic",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "it is {systolic}",
+                "my systolic is {systolic}",
+                "{systolic}"
+              ]
+            },
+            {
+              "name": "diastolic",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{diastolic}"
+              ]
+            },
+            {
+              "name": "heartRate",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{heartRate}"
+              ]
+            },
+            {
+              "name": "oxygenSaturation",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{oxygenSaturation}"
+              ]
+            },
+            {
+              "name": "weight",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{weight}"
+              ]
+            },
+            {
+              "name": "glucose",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{glucose}"
+              ]
+            },
+            {
+              "name": "urineOutput",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{urineOutput}"
+              ]
+            },
+            {
+              "name": "addVitalConfirm",
+              "type": "AddVitalConfirm"
+            }
+          ],
+          "name": "AddVitalsIntent",
+          "samples": [
+            "I want to add new vitals",
+            "add new vitals",
+            "add vitals",
+            "please add new vitals",
+            "add vitals now",
+            "create new vitals",
+            "Add new vitals with systolic {systolic}",
+            "Add new vitals with diastolic {diastolic}",
+            "Add new vitals with heart rate {heartRate}",
+            "Add new vitals with oxygen saturation {oxygenSaturation}",
+            "Add new vitals with weight {weight}",
+            "Add new vitals with glucose {glucose}",
+            "Add new vitals with urine output {urineOutput}",
+            "{addVitalConfirm}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "pin",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            }
+          ],
+          "name": "PinIntent",
+          "samples": [
+            "confirm with pin {pin}",
+            "enter {pin}",
+            "{pin}",
+            "the pin is {pin}",
+            "my pin is {pin}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "yes"
+              }
+            },
+            {
+              "name": {
+                "value": "no"
+              }
+            }
+          ],
+          "name": "AddVitalConfirm"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "yes"
+              }
+            },
+            {
+              "name": {
+                "value": "no"
+              }
+            }
+          ],
+          "name": "SurveyYesNoAnswer"
+        }
+      ],
+      "invocationName": "home care"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you sure you want to add these vitals?"
+          }
+        ],
+        "id": "Elicit.Slot.543819633614.332990094738"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is your systolic blood pressure?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Please tell me your systolic blood pressure."
+          }
+        ],
+        "id": "Elicit.Slot.72630433167.1009930112388"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is your diastolic blood pressure?"
+          }
+        ],
+        "id": "Elicit.Slot.1429144015159.1203086049262"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the heartRate value?"
+          }
+        ],
+        "id": "Elicit.Slot.1250704241389.236951164616"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The systolic value is {systolic}. Is that correct?"
+          }
+        ],
+        "id": "Confirm.Slot.611037829134.696550596557"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The diastolic value is {diastolic}. Is that correct?"
+          }
+        ],
+        "id": "Confirm.Slot.611037829134.694721882518"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The heart rate is {heartRate} Is that correct?"
+          }
+        ],
+        "id": "Confirm.Slot.611037829134.1020104343274"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the oxygenSaturation value?"
+          }
+        ],
+        "id": "Elicit.Slot.611037829134.1574447984807"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The oxygenSaturation value is {oxygenSaturation} Is that correct?"
+          }
+        ],
+        "id": "Confirm.Slot.611037829134.1574447984807"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the weight value?"
+          }
+        ],
+        "id": "Elicit.Slot.611037829134.1161069673329"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The weight value is {weight} Is that correct?"
+          }
+        ],
+        "id": "Confirm.Slot.611037829134.1161069673329"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the glucose value?"
+          }
+        ],
+        "id": "Elicit.Slot.611037829134.1673529771985"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The glucose value is {glucose} Is that correct?"
+          }
+        ],
+        "id": "Confirm.Slot.611037829134.1673529771985"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the urine Output value?"
+          }
+        ],
+        "id": "Elicit.Slot.611037829134.522261055028"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The urine Output value is {urineOutput} Is that correct?"
+          }
+        ],
+        "id": "Confirm.Slot.611037829134.522261055028"
+      }
+    ]
+  }
+}
